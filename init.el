@@ -28,9 +28,7 @@
 (add-to-list 'load-path (concat vendor-path "/ruby-mode"))
 (add-to-list 'load-path (concat vendor-path "/org-6.19b/lisp"))
 (add-to-list 'load-path (concat vendor-path "/remember-1.9"))
-(add-to-list 'load-path (concat vendor-path "/slime"))
 (add-to-list 'load-path (concat vendor-path "/clojure-mode"))
-(add-to-list 'load-path (concat vendor-path "/swank-clojure"))
 
 ;; Color theme stuff
 (require 'color-theme)
@@ -111,26 +109,10 @@
 (autoload 'rubydb "rubydb3x" "Ruby debugger" t)
 
 ;; Clojure
-;; (setq inferior-lisp-program "~/Source/clojure/bin/clj")
 (require 'clojure-mode)
-(setq auto-mode-alist
-      (cons '("\\.clj$" . clojure-mode)
-      auto-mode-alist))
-
-(add-hook 'clojure-mode-hook
-	  '(lambda ()
-	     (define-key clojure-mode-map "\C-c\C-e" 'lisp-eval-last-sexp)))
-
-(setq swank-clojure-binary (concat home-path "/Source/clojure/bin/clj"))
-(require 'swank-clojure-autoload)
-(swank-clojure-config)
-
-;; Set up the Common List environment
-(setq inferior-lisp-program "/opt/local/bin/sbcl")
-(require 'slime)
-(slime-setup)
-
-(add-to-list 'slime-lisp-implementations '(sbcl ("sbcl")))
+(setq clojure-src-root "/Users/chneeb/Source")
+(setq swank-clojure-extra-classpaths nil)
+(clojure-slime-config)
 
 ;; Own stuff
 (defun gcal ()
