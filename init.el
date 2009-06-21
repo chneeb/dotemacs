@@ -15,12 +15,6 @@
 (prefer-coding-system 'utf-8)
 (server-start)
 
-;; Convenience keys
-;; (global-set-key [f4] 'kill-this-buffer)
-;; (global-set-key [f6] 'other-window)
-;; (global-set-key [f7] 'delete-other-windows)
-;; (global-set-key (kbd "<C-tab>") 'bury-buffer)
-
 ;; paren mode
 (setq show-paren-delay 0)
 (show-paren-mode t)
@@ -35,34 +29,8 @@
 (add-to-list 'load-path (concat vendor-path "/org-6.19b/lisp"))
 (add-to-list 'load-path (concat vendor-path "/remember-1.9"))
 (add-to-list 'load-path (concat vendor-path "/slime"))
-(add-to-list 'load-path (concat vendor-path "/ecb-2.32"))
-(add-to-list 'load-path (concat vendor-path "/tramp-2.1.15/lisp"))
 (add-to-list 'load-path (concat vendor-path "/clojure-mode"))
 (add-to-list 'load-path (concat vendor-path "/swank-clojure"))
-(add-to-list 'load-path (concat vendor-path "/emacs-nav-28"))
-(add-to-list 'load-path "/usr/local/scala/misc/scala-tool-support/emacs")
-
-;; Scala mode
-(require 'scala-mode-auto)
-
-;; Malyon -- Infocom interpreter
-(require 'malyon)
-
-;; CEDET
-(load-file (concat vendor-path "/cedet-1.0pre6/common/cedet.el"))
-(global-ede-mode 1)                      ; Enable the Project management system
-(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
-(global-srecode-minor-mode 1)            ; Enable template insertion menu
-
-;; Nav
-(require 'nav)
-
-;; Tramp
-(require 'tramp)
-(setq tramp-default-method "scp")
-
-;; ECB
-(require 'ecb-autoloads)
 
 ;; Color theme stuff
 (require 'color-theme)
@@ -111,24 +79,6 @@
 ;; optional keyboard short-cut
 ;; (global-set-key "\C-xm" 'browse-url-at-point)
 
-;; iTunes control
-;;  * Press the itunes key and then one of:
-;;      key again            : toggle info window.
-;;      +/-/up/down/mute/0-9 : volume control
-;;      left/right           : prev/next track
-;;      space                : toggles playing
-;;      </>                  : increase/decrease rating by one star
-(setq itunes-key [f5])
-(if (string-match "darwin" system-configuration)
-    (require 'osx-itunes)
-  )
-
-;; twitter.el -- http://emacs-fu.blogspot.com/2009/03/twitter.html
-(autoload 'twitter-get-friends-timeline "twitter" nil t)
-(autoload 'twitter-status-edit "twitter" nil t)
-(global-set-key "\C-xt" 'twitter-get-friends-timeline)
-(add-hook 'twitter-status-edit-mode-hook 'longlines-mode)
-
 ;; Ruby stuff
 (autoload 'ruby-mode "ruby-mode" "Major mode for editing ruby scripts." t)
 (setq auto-mode-alist  (cons '(".rb$" . ruby-mode) auto-mode-alist))
@@ -159,52 +109,6 @@
 	     (inf-ruby-keys)))
 ;; If you have Emacs 19.2x or older, use rubydb2x                              
 (autoload 'rubydb "rubydb3x" "Ruby debugger" t)
-
-(defun ruby-eval-buffer () (interactive)
-  "Evaluate the buffer with ruby."
-  (shell-command-on-region (point-min) (point-max) "ruby"))
-
-;; Anything.el
-;; This is only an example. Customize it to your own taste!
-(defvar anything-sources `(((name . "Buffers")
-                            (candidates . anything-buffer-list)
-                            (action . (("Switch to Buffer" . switch-to-buffer)
-                                       ("Kill Buffer" . kill-buffer))))
-
-                           ((name . "File Name History")
-                            (candidates . file-name-history)
-                            (action . find-file)
-                            (type . file))
-
-                           ((name . "Files from Current Directory")
-                            (init-func . (lambda ()
-                                           (setq anything-default-directory
-                                                 default-directory)))
-                            (candidates . (lambda ()
-                                            (directory-files
-                                             anything-default-directory)))
-                            (action . find-file)
-                            (type . file))
-
-                           ((name . "Manual Pages")
-                            (candidates . ,(progn
-                                             (require 'woman)
-                                             (woman-file-name "")
-                                             (sort (mapcar 'car
-                                                           woman-topic-all-completions)
-                                                   'string-lessp)))
-                            (action . woman)
-                            (requires-pattern . 2))
-
-                           ((name . "Complex Command History")
-                            (candidates . (lambda ()
-                                            (mapcar 'prin1-to-string
-                                                    command-history)))
-                            (action . (lambda (c)
-                                        (eval (read c))))
-                            (delayed))))
-(require 'anything)
-(global-set-key "\C-xa" 'anything)
 
 ;; Clojure
 ;; (setq inferior-lisp-program "~/Source/clojure/bin/clj")
