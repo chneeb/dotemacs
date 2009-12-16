@@ -2,6 +2,11 @@
 (setq home-path (expand-file-name "~"))
 (setq vendor-path (concat home-path "/.emacs.d/elisp"))
 
+;; Setting up PATH environment variable
+(when (equal system-type 'darwin)
+  (setenv "PATH" (concat "/opt/local/bin:/usr/local/bin:" (getenv "PATH")))
+  (push "/opt/local/bin" exec-path))
+
 ;; Setting load path
 (add-to-list 'load-path vendor-path)
 (progn (cd vendor-path) (normal-top-level-add-subdirs-to-load-path))
@@ -33,7 +38,42 @@
 ;; Color theme stuff
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-charcoal-black)
+(defun color-theme-djcb-dark ()
+  "dark color theme created by djcb, Jan. 2009."
+  (interactive)
+  (color-theme-install
+    '(color-theme-djcb-dark
+       ((foreground-color . "#a9eadf")
+         (background-color . "black") 
+         (background-mode . dark))
+       (bold ((t (:bold t))))
+       (bold-italic ((t (:italic t :bold t))))
+       (default ((t (nil))))
+       
+       (font-lock-builtin-face ((t (:italic t :foreground "#a96da0"))))
+       (font-lock-comment-face ((t (:italic t :foreground "#bbbbbb"))))
+       (font-lock-comment-delimiter-face ((t (:foreground "#666666"))))
+       (font-lock-constant-face ((t (:bold t :foreground "#197b6e"))))
+       (font-lock-doc-string-face ((t (:foreground "#3041c4"))))
+       (font-lock-doc-face ((t (:foreground "gray"))))
+       (font-lock-reference-face ((t (:foreground "white"))))
+       (font-lock-function-name-face ((t (:foreground "#356da0"))))
+       (font-lock-keyword-face ((t (:bold t :foreground "#bcf0f1"))))
+       (font-lock-preprocessor-face ((t (:foreground "#e3ea94"))))
+       (font-lock-string-face ((t (:foreground "#ffffff"))))
+       (font-lock-type-face ((t (:bold t :foreground "#364498"))))
+       (font-lock-variable-name-face ((t (:foreground "#7685de"))))
+       (font-lock-warning-face ((t (:bold t :italic nil :underline nil 
+                                     :foreground "yellow"))))
+       (hl-line ((t (:background "#112233"))))
+       (mode-line ((t (:foreground "#ffffff" :background "#333333"))))
+       (region ((t (:foreground nil :background "#555555"))))
+       (show-paren-match-face ((t (:bold t :foreground "#ffffff" 
+                                    :background "#050505"))))
+       (twitter-user-name-face ((t (:bold t :foreground "white"  :background "blue"))))
+       (twitter-header-face ((t (:bold t :foreground "white"  :background "blue"))))
+       (twitter-time-stamp-face ((t (:bold nil :foreground "white" :background "blue")))))))
+(color-theme-djcb-dark)
 
 ;; BBDB stuff
 (require 'bbdb)
@@ -178,10 +218,8 @@
 ;; - tramp
 ;; - Jabber client
 ;; - JDEE
-;; - eudcb-mab.el
 ;; - whitespace-mode -- http://www.emacswiki.org/emacs/WhiteSpace
 ;; - http://www.djcbsoftware.nl/dot-emacs.html
 ;; - http://www.emacswiki.org/cgi-bin/wiki/FileNameCache
 ;; - http://www.busydoingnothing.co.uk/twitter-el/
 ;; - http://www.emacswiki.org/emacs/hgw-init-wl.el
-;; - http://www.djcbsoftware.nl/dot-emacs.html
