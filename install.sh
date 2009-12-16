@@ -19,3 +19,9 @@ git clone git://github.com/jochu/clojure-mode.git elisp/clojure-mode
 # Color theme
 curl http://download.savannah.gnu.org/releases-noredirect/color-theme/color-theme-6.6.0.tar.gz | tar xzf - -C elisp
 
+# Wanderlust
+curl http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/apel/apel-10.7.tar.gz | tar xzf - -C elisp
+curl http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/flim/flim-1.14/flim-1.14.9.tar.gz | tar xzf - -C elisp
+curl http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/semi/semi-1.14-for-flim-1.14/semi-1.14.6.tar.gz | tar xzf - -C elisp
+curl http://www.jpl.org/elips/wl/snapshots/wanderlust-200908202051.tar.gz | tar xzf - -C elisp
+
