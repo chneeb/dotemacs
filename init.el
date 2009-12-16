@@ -160,6 +160,9 @@
 (global-set-key (kbd "C--")      '(lambda nil (interactive) (djcb-zoom -1)))
 (global-set-key [C-kp-subtract]  '(lambda nil (interactive) (djcb-zoom -1)))
 
+(djcb-zoom 1)
+(djcb-zoom 1)
+
 ;; Own stuff
 (defun gcal ()
   (interactive)
