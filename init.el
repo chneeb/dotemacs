@@ -88,10 +88,10 @@
 (require 'rinari)
 
 ;; Clojure
-(require 'clojure-mode)
-(setq clojure-src-root "/Users/chneeb/Source")
-(setq swank-clojure-extra-classpaths nil)
-(clojure-slime-config)
+;;(require 'clojure-mode)
+;;(setq clojure-src-root "/Users/chneeb/Source")
+;;(setq swank-clojure-extra-classpaths nil)
+;;(clojure-slime-config)
 
 (setq ssl-program-name "openssl")
 (setq ssl-program-arguments '("s_client" "-quiet" "-host" host "-port" service))
