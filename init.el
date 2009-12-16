@@ -19,6 +19,12 @@
 (prefer-coding-system 'utf-8)
 (server-start)
 
+;; Mac meta key settings
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
+
 ;; paren mode
 (setq show-paren-delay 0)
 (show-paren-mode t)
