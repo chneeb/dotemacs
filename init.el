@@ -33,7 +33,7 @@
 ;; Color theme stuff
 (require 'color-theme)
 (color-theme-initialize)
-;;(color-theme-robin-hood)
+(color-theme-charcoal-black))
 
 ;; BBDB stuff
 (require 'bbdb)
