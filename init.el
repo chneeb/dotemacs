@@ -25,9 +25,9 @@
 (setq show-paren-style 'parenthesis) ;'expression, 'parenthesis or 'mixed
 
 ;; Color theme stuff
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-robin-hood)
+;;(require 'color-theme)
+;;(color-theme-initialize)
+;;(color-theme-robin-hood)
 
 ;; BBDB stuff
 (require 'bbdb)
