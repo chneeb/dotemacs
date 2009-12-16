@@ -85,6 +85,7 @@
   (setq standard-indent 2)
   (ruby-electric-mode t))
 (add-hook 'ruby-mode-hook 'chneeb-ruby-mode-hook)
+(require 'rinari)
 
 ;; Clojure
 (require 'clojure-mode)

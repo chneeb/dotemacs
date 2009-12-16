@@ -25,3 +25,9 @@ curl http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/flim/flim-1.14/flim-1
 curl http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/semi/semi-1.14-for-flim-1.14/semi-1.14.6.tar.gz | tar xzf - -C elisp
 curl http://www.jpl.org/elips/wl/snapshots/wanderlust-200908202051.tar.gz | tar xzf - -C elisp
 
+# Rinari
+git clone git://github.com/eschulte/rinari.git elisp/rinari
+cd elisp/rinari
+git submodule init
+git submodule update
+
