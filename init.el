@@ -33,7 +33,7 @@
 ;; Color theme stuff
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-robin-hood)
+;;(color-theme-robin-hood)
 
 ;; BBDB stuff
 (require 'bbdb)
@@ -141,6 +141,13 @@
       'wl-draft-send
       'wl-draft-kill
       'mail-send-hook))
+
+;; Twitter
+(require 'twitter)
+(autoload 'twitter-get-friends-timeline "twitter" nil t)
+(autoload 'twitter-status-edit "twitter" nil t)
+(global-set-key "\C-xt" 'twitter-get-friends-timeline)
+(add-hook 'twitter-status-edit-mode-hook 'longlines-mode)
 
 ;; Zoom
 (defun djcb-zoom (n)
