@@ -1,6 +1,7 @@
 ;; Home and vendor path
 (setq home-path (expand-file-name "~"))
-(setq vendor-path (concat home-path "/.emacs.d/elisp"))
+(setq dotemacs-path (concat home-path "/.emacs.d"))
+(setq vendor-path (concat dotemacs-path "/elisp"))
 
 ;; Setting up PATH environment variable
 (when (equal system-type 'darwin)
@@ -200,6 +201,8 @@
       'wl-draft-kill
       'mail-send-hook))
 
+(setq wl-folders-file (concat dotemacs-path "/wl-folders"))
+
 ;; Twitter
 (require 'twitter)
 (autoload 'twitter-get-friends-timeline "twitter" nil t)
@@ -239,5 +242,5 @@
 ;; - whitespace-mode -- http://www.emacswiki.org/emacs/WhiteSpace
 ;; - http://www.djcbsoftware.nl/dot-emacs.html
 ;; - http://www.emacswiki.org/cgi-bin/wiki/FileNameCache
-;; - http://www.busydoingnothing.co.uk/twitter-el/
 ;; - http://www.emacswiki.org/emacs/hgw-init-wl.el
+;; - paredit-mode
