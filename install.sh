@@ -33,7 +33,13 @@ git clone git://git.busydoingnothing.co.uk/twitter.git elisp/twitter
 
 # Rinari
 git clone git://github.com/eschulte/rinari.git elisp/rinari
+PWD = `pwd`
 cd elisp/rinari
 git submodule init
 git submodule update
+cd $PWD
+
+# Jabber
+#git clone git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber elisp/emacs-jabber
+#http://sourceforge.net/projects/emacs-jabber/files/emacs-jabber/0.8.0/emacs-jabber-0.8.0.tar.bz2/download
 

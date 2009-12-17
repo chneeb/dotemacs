@@ -213,6 +213,13 @@
 ;; Magit
 (require 'magit)
 
+;; Jabber
+(require 'jabber-autoloads)
+(setq jabber-account-list
+    '(("chneeb@gmail.com" 
+       (:network-server . "talk.google.com")
+       (:connection-type . ssl))))
+
 ;; Zoom
 (defun djcb-zoom (n)
   "with positive N, increase the font size, otherwise decrease it"
@@ -236,10 +243,8 @@
 
 ;; Try the following
 ;; - yasnippet
-;; - magit
 ;; - http://orgmode.org/worg/org-customization-guide.php
 ;; - rubydb (Ruby Debugger)
-;; - Jabber client
 ;; - JDEE
 ;; - http://www.djcbsoftware.nl/dot-emacs.html
 ;; - http://www.emacswiki.org/emacs/hgw-init-wl.el
