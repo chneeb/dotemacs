@@ -210,6 +210,9 @@
 (global-set-key "\C-xt" 'twitter-get-friends-timeline)
 (add-hook 'twitter-status-edit-mode-hook 'longlines-mode)
 
+;; Magit
+(require 'magit)
+
 ;; Zoom
 (defun djcb-zoom (n)
   "with positive N, increase the font size, otherwise decrease it"
@@ -236,11 +239,8 @@
 ;; - magit
 ;; - http://orgmode.org/worg/org-customization-guide.php
 ;; - rubydb (Ruby Debugger)
-;; - tramp
 ;; - Jabber client
 ;; - JDEE
-;; - whitespace-mode -- http://www.emacswiki.org/emacs/WhiteSpace
 ;; - http://www.djcbsoftware.nl/dot-emacs.html
-;; - http://www.emacswiki.org/cgi-bin/wiki/FileNameCache
 ;; - http://www.emacswiki.org/emacs/hgw-init-wl.el
 ;; - paredit-mode
