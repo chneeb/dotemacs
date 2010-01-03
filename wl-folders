@@ -1,3 +1,8 @@
-%inbox  "Inbox"
-%[Gmail]/Trash  "Trash"
-%[Gmail]/Drafts  "Drafts"
+Gmail{
+  %inbox		"Inbox"
+  %[Gmail]/Trash	"Trash"
+  %[Gmail]/Drafts	"Drafts"
+  %[Gmail]/Sent Mail	"Sent Mail"
+  %[Gmail]/All Mail	"All Mail"
+  %Facebook    		"Facebook"
+}

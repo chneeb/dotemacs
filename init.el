@@ -160,6 +160,11 @@
 (autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
 (autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
 
+;; Fields in the e-mail header that I do not want to see (regexps)
+(setq wl-message-ignored-field-list (quote (".*Received:" ".*Path:" ".*Id:" "^References:" "^Replied:" "^Errors-To:" "^Lines:" "^Sender:" ".*Host:" "^Xref:" "^Content-Type:" "^Precedence:" "^Status:" "^X-VM-.*:" "^List-*" "^Authentication-Results*" "^X-*" "^Received-SPF*" "^DKIM-Signature:" "^DomainKey-Signature:" "^X-Mailman-Version:")))
+;; Fields in the e-mail header that I want to see even if they match the regex in wl-message-ignored-field-list
+(setq wl-message-visible-field-list (quote ("^Dnas.*:" "^Message-Id:" "^X-Mailer:" "^X-Mailman-Version:")))
+
 ;; IMAP
 (setq elmo-imap4-default-server "imap.gmail.com")
 (setq elmo-imap4-default-user "chneeb@gmail.com") 
