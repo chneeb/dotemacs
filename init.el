@@ -26,10 +26,10 @@
 (server-start)
 
 ;; Mac meta key settings
-(setq mac-option-key-is-meta nil)
-(setq mac-command-key-is-meta t)
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier nil)
+;; (setq mac-option-key-is-meta nil)
+;; (setq mac-command-key-is-meta t)
+;; (setq mac-command-modifier 'meta)
+;; (setq mac-option-modifier nil)
 
 ;; paren mode
 (setq show-paren-delay 0)
@@ -168,11 +168,11 @@
 	       (nnimap-authinfo-file "~/.authinfo")
 	       (nnimap-stream ssl)))
 
-(setq gnus-secondary-select-methods
-      '((nnimap "work"
-		 (nnimap-address "145.228.237.176")
-		 (nnimap-server-port 143))
-	(nntp "news.gmane.org")))
+;; (setq gnus-secondary-select-methods
+;;       '((nnimap "work"
+;; 		 (nnimap-address "145.228.237.176")
+;; 		 (nnimap-server-port 143))
+;; 	(nntp "news.gmane.org")))
 
 (setq smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
       smtpmail-smtp-server "smtp.gmail.com"
