@@ -164,11 +164,18 @@
 (require 'rinari)
 
 ;; Clojure
-;;(require 'clojure-mode)
-;;(setq clojure-src-root "/Users/chneeb/Source")
-;;(setq swank-clojure-extra-classpaths nil)
-;;(clojure-slime-config)
+(setq swank-clojure-jar-path "~/.emacs.d/clojure/clojure/clojure.jar"
+      swank-clojure-extra-classpaths (list
+				      "~/.emacs.d/elisp/swank-clojure/src/main/clojure"
+				      "~/.emacs.d/clojure/clojure-contrib/clojure-contrib.jar"))
+(require 'clojure-mode)
+(require 'swank-clojure-autoload)
+(require 'slime)
 
+(eval-after-load "slime" (slime-setup '(slime-repl)))
+(slime-setup)
+
+;; OpenSSL
 (setq ssl-program-name "openssl")
 (setq ssl-program-arguments '("s_client" "-quiet" "-host" host "-port" service))
 

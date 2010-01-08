@@ -16,6 +16,16 @@ svn co http://svn.ruby-lang.org/repos/ruby/trunk/misc elisp/ruby-mode
 # Clojure
 git clone git://github.com/jochu/clojure-mode.git elisp/clojure-mode
 
+# Swank-clojure
+git clone git://github.com/jochu/swank-clojure.git elisp/swank-clojure
+
+# Slime
+git clone git://git.boinkor.net/slime.git elisp/slime
+
+# Clojure and clojure-contrib
+git clone git://github.com/richhickey/clojure.git clojure/clojure
+git clone git://github.com/richhickey/clojure-contrib.git clojure/clojure-contrib
+
 # Color theme
 curl http://download.savannah.gnu.org/releases-noredirect/color-theme/color-theme-6.6.0.tar.gz | tar xzf - -C elisp
 
