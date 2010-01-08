@@ -3,6 +3,13 @@ Gmail{
   %[Gmail]/Trash	"Trash"
   %[Gmail]/Drafts	"Drafts"
   %[Gmail]/Sent Mail	"Sent Mail"
-  %[Gmail]/All Mail	"All Mail"
-  %Facebook    		"Facebook"
+  %[Gmail]/Starred	"Starred"
+#  %[Gmail]/All Mail	"All Mail"
+#  %/
 }
+
+Work{
+#  %inbox:"bmedia/neeb03"/clear@gtlbml7ct0001.bagmail.net:143    "Inbox"
+#  %inbox.Arvato Systems:neeb03/ntlm@gtlbml7ct0001.bagmail.net:143    "Arvato Systems"
+}
+

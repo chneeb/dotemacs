@@ -16,7 +16,7 @@
 (blink-cursor-mode 0)
 (setq visible-bell t)
 (setq inhibit-startup-message t)
-(setq frame-title-format "Emacs - %b")
+(setq frame-title-format "Emacs - %b - %f")
 (tool-bar-mode 0)
 (transient-mark-mode t)
 (global-hl-line-mode 0)
@@ -24,12 +24,6 @@
 (setq make-backup-files nil)
 (prefer-coding-system 'utf-8)
 (server-start)
-
-;; Mac meta key settings
-;; (setq mac-option-key-is-meta nil)
-;; (setq mac-command-key-is-meta t)
-;; (setq mac-command-modifier 'meta)
-;; (setq mac-option-modifier nil)
 
 ;; paren mode
 (setq show-paren-delay 0)
@@ -95,8 +89,32 @@
                                (modify-frame-parameters nil `((alpha . 100)))))
 
 ;; BBDB stuff
+(setq bbdb-file "~/.emacs.d/bbdb")
 (require 'bbdb)
 (bbdb-initialize)
+(setq 
+    bbdb-offer-save 1                        ;; 1 means save-without-asking   
+    bbdb-use-pop-up t                        ;; allow popups for addresses
+    bbdb-electric-p t                        ;; be disposable with SPC
+    bbdb-popup-target-lines  1               ;; very small
+    bbdb-dwim-net-address-allow-redundancy t ;; always use full name
+    bbdb-quiet-about-name-mismatches 2       ;; show name-mismatches 2 secs
+    bbdb-always-add-address t                ;; add new addresses to existing...
+                                             ;; ...contacts automatically
+    bbdb-canonicalize-redundant-nets-p t     ;; x@foo.bar.cx => x@bar.cx
+    bbdb-completion-type nil                 ;; complete on anything
+    bbdb-complete-name-allow-cycling t       ;; cycle through matches
+                                             ;; this only works partially
+    bbbd-message-caching-enabled t           ;; be fast
+    bbdb-use-alternate-names t               ;; use AKA
+    bbdb-elided-display t                    ;; single-line addresses
+    ;; auto-create addresses from mail
+    bbdb/mail-auto-create-p 'bbdb-ignore-some-messages-hook   
+    bbdb-ignore-some-messages-alist ;; don't ask about fake addresses
+    ;; NOTE: there can be only one entry per header (such as To, From)
+    ;; http://flex.ee.uec.ac.jp/texi/bbdb/bbdb_11.html
+    '(( "From" . "no.?reply\\|DAEMON\\|daemon\\|facebookmail\\|twitter")))
+)
 
 ;; ido mode
 (require 'ido)
@@ -154,6 +172,68 @@
 
 (setq ssl-program-name "openssl")
 (setq ssl-program-arguments '("s_client" "-quiet" "-host" host "-port" service))
+
+;; wanderlust
+(autoload 'wl "wl" "Wanderlust" t)
+(autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
+(autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
+ 
+;; Fields in the e-mail header that I do not want to see (regexps)
+(setq wl-message-ignored-field-list (quote (".*Received:" ".*Path:" ".*Id:" "^References:" "^Replied:" "^Errors-To:" "^Lines:" "^Sender:" ".*Host:" "^Xref:" "^Content-Type:" "^Precedence:" "^Status:" "^X-VM-.*:" "^List-*" "^Authentication-Results*" "^X-*" "^Received-SPF*" "^DKIM-Signature:" "^DomainKey-Signature:" "^X-Mailman-Version:")))
+;; Fields in the e-mail header that I want to see even if they match the regex in wl-message-ignored-field-list
+(setq wl-message-visible-field-list (quote ("^Dnas.*:" "^Message-Id:" "^X-Mailer:" "^X-Mailman-Version:")))
+ 
+;; IMAP
+(setq elmo-imap4-default-server "imap.gmail.com")
+(setq elmo-imap4-default-user "chneeb@gmail.com")
+(setq elmo-imap4-default-authenticate-type 'clear)
+(setq elmo-imap4-default-port '993)
+(setq elmo-imap4-default-stream-type 'ssl) 
+(setq elmo-imap4-use-modified-utf7 t)
+
+;; SMTP
+(setq wl-smtp-connection-type 'starttls)
+(setq wl-smtp-posting-port 587)
+(setq wl-smtp-authenticate-type "plain")
+(setq wl-smtp-posting-user "chneeb")
+(setq wl-smtp-posting-server "smtp.gmail.com")
+(setq wl-local-domain "gmail.com")
+ 
+(setq wl-from "Christian Neeb <chneeb@gmail.com>")
+(setq wl-draft-enable-queuing t)
+(if (eq window-system 'mac)
+    (setq wl-stay-folder-window t))
+(setq wl-default-folder "%inbox")
+(setq wl-default-spec "%")
+(setq wl-draft-folder "%[Gmail]/Drafts") ; Gmail IMAP
+(setq wl-trash-folder "%[Gmail]/Trash")
+ 
+(setq wl-folder-check-async t)
+ 
+(setq elmo-imap4-use-modified-utf7 t)
+ 
+(autoload 'wl-user-agent-compose "wl-draft" nil t)
+(if (boundp 'mail-user-agent)
+    (setq mail-user-agent 'wl-user-agent))
+(if (fboundp 'define-mail-user-agent)
+    (define-mail-user-agent
+      'wl-user-agent
+      'wl-user-agent-compose
+      'wl-draft-send
+      'wl-draft-kill
+      'mail-send-hook))
+ 
+(setq wl-folders-file (concat dotemacs-path "/wl-folders"))
+
+(require 'bbdb-wl)
+(bbdb-wl-setup)
+
+;; i don't want to store addresses from my mailing folders
+;; (setq 
+;;  bbdb-wl-folder-regexp    ;; get addresses only from these folders
+;;  "^\.inbox$\\|^.sent")    ;; 
+
+(define-key wl-draft-mode-map (kbd "<C-tab>") 'bbdb-complete-name)
 
 ;; gnus
 (require 'gnus)
@@ -221,7 +301,7 @@
   (let 
       ((quick-add (read-from-minibuffer "Quick Add: "))
        (max-mini-window-height 0))
-    (shell-command (concat "ruby '" home-path "/Source/gcal.rb' " quick-add) "*gcal*")
+    (shell-command (concat "gcal " quick-add) "*gcal*")
     )
   )
 
@@ -233,3 +313,8 @@
 ;; - http://www.djcbsoftware.nl/dot-emacs.html
 ;; - http://www.emacswiki.org/emacs/hgw-init-wl.el
 ;; - paredit-mode
+;; - Exchange Wanderlust IMAP:
+;;     Did you try setting elmo-imap4-default-authenticate-type to 'clear
+;;     instead? It works with my exchange server, although it claims to use
+;;     NTLM.
+;;;    Or Try (setq elmo-imap4-default-authenticate-type 'ntlm).
