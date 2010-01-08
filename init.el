@@ -114,7 +114,6 @@
     ;; NOTE: there can be only one entry per header (such as To, From)
     ;; http://flex.ee.uec.ac.jp/texi/bbdb/bbdb_11.html
     '(( "From" . "no.?reply\\|DAEMON\\|daemon\\|facebookmail\\|twitter")))
-)
 
 ;; ido mode
 (require 'ido)
@@ -232,8 +231,7 @@
 ;; (setq 
 ;;  bbdb-wl-folder-regexp    ;; get addresses only from these folders
 ;;  "^\.inbox$\\|^.sent")    ;; 
-
-(define-key wl-draft-mode-map (kbd "<C-tab>") 'bbdb-complete-name)
+;; (define-key wl-draft-mode-map (kbd "<C-tab>") 'bbdb-complete-name)
 
 ;; gnus
 (require 'gnus)
