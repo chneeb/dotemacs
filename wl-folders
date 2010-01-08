@@ -9,7 +9,6 @@ Gmail{
 }
 
 Work{
-#  %inbox:"bmedia/neeb03"/clear@gtlbml7ct0001.bagmail.net:143    "Inbox"
+#  %inbox:neeb03@bmedia/ntlm@gtlbml7ct0001.bagmail.net:143    "Inbox"
 #  %inbox.Arvato Systems:neeb03/ntlm@gtlbml7ct0001.bagmail.net:143    "Arvato Systems"
 }
-

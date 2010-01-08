@@ -178,6 +178,7 @@
 ;; OpenSSL
 (setq ssl-program-name "openssl")
 (setq ssl-program-arguments '("s_client" "-quiet" "-host" host "-port" service))
+(setq ssl-certificate-verification-policy 0)
 
 ;; wanderlust
 (autoload 'wl "wl" "Wanderlust" t)
@@ -194,7 +195,7 @@
 (setq elmo-imap4-default-user "chneeb@gmail.com")
 (setq elmo-imap4-default-authenticate-type 'clear)
 (setq elmo-imap4-default-port '993)
-(setq elmo-imap4-default-stream-type 'ssl) 
+(setq elmo-imap4-default-stream-type 'ssl)
 (setq elmo-imap4-use-modified-utf7 t)
 
 ;; SMTP
