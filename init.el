@@ -88,6 +88,9 @@
 (global-set-key (kbd "C-0") '(lambda()(interactive)
                                (modify-frame-parameters nil `((alpha . 100)))))
 
+;; Turn off anti-aliasing
+(setq mac-allow-anti-aliasing nil)
+
 ;; BBDB stuff
 (setq bbdb-file "~/.emacs.d/bbdb")
 (require 'bbdb)
