@@ -68,7 +68,7 @@
        (twitter-user-name-face ((t (:bold t :foreground "white"  :background "blue"))))
        (twitter-header-face ((t (:bold t :foreground "white"  :background "blue"))))
        (twitter-time-stamp-face ((t (:bold nil :foreground "white" :background "blue")))))))
-(color-theme-robin-hood)
+(color-theme-arjen)
 
 ;; Opacity
 (defun djcb-opacity-modify (&optional dec)
