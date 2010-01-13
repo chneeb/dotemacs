@@ -83,9 +83,9 @@
   ;; SMTP
   (setq wl-smtp-connection-type nil)
   (setq wl-smtp-posting-port 25)
-  (setq wl-smtp-authenticate-type "plain")
+  (setq wl-smtp-authenticate-type "login")
   (setq wl-smtp-posting-user "bmedia/neeb03")
-  (setq wl-smtp-posting-server "gtlbml7ct0001.bagmail.net")
+  (setq wl-smtp-posting-server "nycbmlexs0011.bagmail.net")
   (setq wl-local-domain "arvatosystems.com")
 )
 
