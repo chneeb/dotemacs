@@ -8,34 +8,11 @@
 ;; Fields in the e-mail header that I want to see even if they match the regex in wl-message-ignored-field-list
 (setq wl-message-visible-field-list (quote ("^Dnas.*:" "^Message-Id:" "^X-Mailer:" "^X-Mailman-Version:")))
  
-;; IMAP
-(setq elmo-imap4-default-server "imap.gmail.com")
-(setq elmo-imap4-default-user "chneeb@gmail.com")
-(setq elmo-imap4-default-authenticate-type 'clear)
-(setq elmo-imap4-default-port '993)
-(setq elmo-imap4-default-stream-type 'ssl)
-(setq elmo-imap4-use-modified-utf7 t)
-
-;; SMTP
-(setq wl-smtp-connection-type 'starttls)
-(setq wl-smtp-posting-port 587)
-(setq wl-smtp-authenticate-type "plain")
-(setq wl-smtp-posting-user "chneeb")
-(setq wl-smtp-posting-server "smtp.gmail.com")
-(setq wl-local-domain "gmail.com")
- 
-(setq wl-from "Christian Neeb <chneeb@gmail.com>")
 (setq wl-draft-enable-queuing t)
-(if (eq window-system 'mac)
-    (setq wl-stay-folder-window t))
-(setq wl-default-folder "%inbox")
-(setq wl-default-spec "%")
-(setq wl-draft-folder "%[Gmail]/Drafts") ; Gmail IMAP
-(setq wl-trash-folder "%[Gmail]/Trash")
- 
 (setq wl-folder-check-async t)
- 
-(setq elmo-imap4-use-modified-utf7 t)
+
+(if (eq window-system 'mac)
+    (setq wl-stay-folder-window t)) 
  
 (autoload 'wl-user-agent-compose "wl-draft" nil t)
 (if (boundp 'mail-user-agent)
@@ -47,8 +24,6 @@
       'wl-draft-send
       'wl-draft-kill
       'mail-send-hook))
- 
-(setq wl-folders-file (concat dotemacs-path "/wl-folders"))
 
 (require 'bbdb-wl)
 (bbdb-wl-setup)
@@ -58,3 +33,60 @@
 ;;  bbdb-wl-folder-regexp    ;; get addresses only from these folders
 ;;  "^\.inbox$\\|^.sent")    ;; 
 ;; (define-key wl-draft-mode-map (kbd "<C-tab>") 'bbdb-complete-name)
+
+;; Gmail Account
+(defun wl-account-gmail ()
+  ;; General
+  (setq wl-from "Christian Neeb <chneeb@gmail.com>")
+  (setq wl-default-folder "%inbox")
+  (setq wl-default-spec "%")
+  (setq wl-draft-folder "%[Gmail]/Drafts") ; Gmail IMAP
+  (setq wl-trash-folder "%[Gmail]/Trash")
+  (setq wl-folders-file (concat dotemacs-path "/wl-folders"))
+
+  ;; IMAP
+  (setq elmo-imap4-default-server "imap.gmail.com")
+  (setq elmo-imap4-default-user "chneeb@gmail.com")
+  (setq elmo-imap4-default-authenticate-type 'clear)
+  (setq elmo-imap4-default-port '993)
+  (setq elmo-imap4-default-stream-type 'ssl)
+  (setq elmo-imap4-use-modified-utf7 t)
+
+  ;; SMTP
+  (setq wl-smtp-connection-type 'starttls)
+  (setq wl-smtp-posting-port 587)
+  (setq wl-smtp-authenticate-type "plain")
+  (setq wl-smtp-posting-user "chneeb")
+  (setq wl-smtp-posting-server "smtp.gmail.com")
+  (setq wl-local-domain "gmail.com") 
+)
+
+;; Work account
+(defun wl-account-work ()
+  ;; General
+  (setq wl-from "Christian Neeb <christian.neeb@arvatosystems.com>")
+  (setq wl-default-folder "%inbox")
+  (setq wl-default-spec "%")
+  ;;(setq wl-draft-folder "%[Gmail]/Drafts") ; Gmail IMAP
+  ;;(setq wl-trash-folder "%[Gmail]/Trash")
+  (setq wl-folders-file (concat dotemacs-path "/wl-work-folders"))
+
+  ;; IMAP
+  (setq elmo-imap4-default-server "gtlbml7ct0001.bagmail.net")
+  (setq elmo-imap4-default-user "bmedia/neeb03")
+  (setq elmo-imap4-default-authenticate-type 'clear)
+  (setq elmo-imap4-default-port '143)
+  (setq elmo-imap4-default-stream-type nil)
+  (setq elmo-imap4-use-modified-utf7 t)
+  (setq elmo-imap4-debug t)
+
+  ;; SMTP
+  (setq wl-smtp-connection-type nil)
+  (setq wl-smtp-posting-port 25)
+  (setq wl-smtp-authenticate-type "plain")
+  (setq wl-smtp-posting-user "bmedia/neeb03")
+  (setq wl-smtp-posting-server "gtlbml7ct0001.bagmail.net")
+  (setq wl-local-domain "arvatosystems.com")
+)
+
+(wl-account-gmail)

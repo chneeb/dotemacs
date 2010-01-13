@@ -155,10 +155,10 @@
        (:connection-type . ssl))))
 
 ;; gnus
-(load-file (concat dotemacs-path "/gnus.el"))
+;;(load-file (concat dotemacs-path "/gnus.el"))
 
 ;; djcb stuff
-(load-file (concat dotemacs-path "/djcb.el"))
+;;(load-file (concat dotemacs-path "/djcb.el"))
 
 ;; Own stuff
 (defun gcal ()
