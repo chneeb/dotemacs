@@ -115,6 +115,13 @@
   (setq standard-indent 2)
   (ruby-electric-mode t))
 (add-hook 'ruby-mode-hook 'chneeb-ruby-mode-hook)
+;; Fixing ruby-insert-end
+(defun ruby-insert-end () 
+  "Insert \"end\" at point and reindent current line." 
+  (interactive) 
+  (insert "end") 
+  (ruby-indent-line t) 
+  (end-of-line)) 
 (require 'rinari)
 
 ;; Clojure
