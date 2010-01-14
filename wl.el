@@ -11,6 +11,7 @@
 (setq wl-draft-enable-queuing t)
 (setq wl-folder-check-async t)
 (setq wl-show-plug-status-on-modeline t)
+(setq elmo-imap4-use-cache t)
 
 ;; Adding modeline status
 (setq global-mode-string
