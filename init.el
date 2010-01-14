@@ -179,3 +179,4 @@
 ;; - http://www.emacswiki.org/emacs/hgw-init-wl.el
 ;; - paredit-mode
 ;; - Exchange Wanderlust IMAP: Try (setq elmo-imap4-default-authenticate-type 'ntlm).
+;; - icalendar-import-import

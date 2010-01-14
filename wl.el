@@ -10,6 +10,15 @@
  
 (setq wl-draft-enable-queuing t)
 (setq wl-folder-check-async t)
+(setq wl-show-plug-status-on-modeline t)
+
+;; Adding modeline status
+(setq global-mode-string
+      (cons
+       '(wl-modeline-biff-status
+         wl-modeline-biff-state-on
+         wl-modeline-biff-state-off)
+       global-mode-string))
 
 (if (eq window-system 'mac)
     (setq wl-stay-folder-window t)) 
