@@ -161,6 +161,13 @@
        (:network-server . "talk.google.com")
        (:connection-type . ssl))))
 
+;;text-mode
+(add-hook 'text-mode-hook
+  (lambda() 
+    (set-fill-column 78)                    ; lines are 78 chars long ...
+    (auto-fill-mode t)                      ; ... and wrapped around 
+    (set-input-method "latin-1-prefix")))    ; make " + e => ë etc.
+
 ;; gnus
 ;;(load-file (concat dotemacs-path "/gnus.el"))
 
@@ -180,6 +187,7 @@
 ;; Try the following
 ;; - yasnippet
 ;; - http://orgmode.org/worg/org-customization-guide.php
+;; - http://blog.client9.com/2007/09/ruby-mode-for-emacs.html
 ;; - rubydb (Ruby Debugger)
 ;; - JDEE
 ;; - http://www.djcbsoftware.nl/dot-emacs.html
