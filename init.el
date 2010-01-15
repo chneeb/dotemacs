@@ -113,6 +113,8 @@
 (defun chneeb-ruby-mode-hook()
   (font-lock-mode t)
   (setq standard-indent 2)
+  (set (make-local-variable 'compile-command) (concat "ruby " (buffer-file-name)))
+  (local-set-key "\C-c\C-c" 'compile)
   (ruby-electric-mode t))
 (add-hook 'ruby-mode-hook 'chneeb-ruby-mode-hook)
 ;; Fixing ruby-insert-end
@@ -194,4 +196,4 @@
 ;; - http://www.emacswiki.org/emacs/hgw-init-wl.el
 ;; - paredit-mode
 ;; - Exchange Wanderlust IMAP: Try (setq elmo-imap4-default-authenticate-type 'ntlm).
-;; - icalendar-import-import
+;; - icalendar-import-buffer
