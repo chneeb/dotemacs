@@ -170,6 +170,11 @@
     (auto-fill-mode t)                      ; ... and wrapped around 
     (set-input-method "latin-1-prefix")))    ; make " + e => ë etc.
 
+;; Yasnippet
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/elisp/yasnippet-0.6.1c/snippets")
+
 ;; gnus
 ;;(load-file (concat dotemacs-path "/gnus.el"))
 
@@ -187,7 +192,6 @@
   )
 
 ;; Try the following
-;; - yasnippet
 ;; - http://orgmode.org/worg/org-customization-guide.php
 ;; - http://blog.client9.com/2007/09/ruby-mode-for-emacs.html
 ;; - rubydb (Ruby Debugger)

@@ -49,6 +49,9 @@ git submodule init
 git submodule update
 cd $PWD
 
+# Yasnippet
+curl http://yasnippet.googlecode.com/files/yasnippet-0.6.1c.tar.bz2 | tar xjf - -C elisp
+
 # Jabber
 #git clone git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber elisp/emacs-jabber
 #http://sourceforge.net/projects/emacs-jabber/files/emacs-jabber/0.8.0/emacs-jabber-0.8.0.tar.bz2/download
