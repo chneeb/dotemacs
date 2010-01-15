@@ -115,6 +115,7 @@
   (setq standard-indent 2)
   (set (make-local-variable 'compile-command) (concat "ruby " (buffer-file-name)))
   (local-set-key "\C-c\C-c" 'compile)
+  (local-set-key "\C-c\C-d" 'rdebug)
   (ruby-electric-mode t))
 (add-hook 'ruby-mode-hook 'chneeb-ruby-mode-hook)
 ;; Fixing ruby-insert-end
