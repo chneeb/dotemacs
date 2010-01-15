@@ -56,3 +56,6 @@ curl http://yasnippet.googlecode.com/files/yasnippet-0.6.1c.tar.bz2 | tar xjf - 
 #git clone git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber elisp/emacs-jabber
 #http://sourceforge.net/projects/emacs-jabber/files/emacs-jabber/0.8.0/emacs-jabber-0.8.0.tar.bz2/download
 
+# Ruby Debug
+# http://rubyforge.org/frs/download.php/46883/ruby-debug-extra-0.10.3.tar.gz
+

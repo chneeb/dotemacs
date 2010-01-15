@@ -125,6 +125,7 @@
   (ruby-indent-line t) 
   (end-of-line)) 
 (require 'rinari)
+(require 'rdebug)
 
 ;; Clojure
 (setq swank-clojure-jar-path "~/.emacs.d/clojure/clojure/clojure.jar"
@@ -194,10 +195,10 @@
 ;; Try the following
 ;; - http://orgmode.org/worg/org-customization-guide.php
 ;; - http://blog.client9.com/2007/09/ruby-mode-for-emacs.html
-;; - rubydb (Ruby Debugger)
 ;; - JDEE
 ;; - http://www.djcbsoftware.nl/dot-emacs.html
 ;; - http://www.emacswiki.org/emacs/hgw-init-wl.el
 ;; - paredit-mode
 ;; - Exchange Wanderlust IMAP: Try (setq elmo-imap4-default-authenticate-type 'ntlm).
 ;; - icalendar-import-buffer
+;; - http://github.com/eschulte/yasnippets-rails
