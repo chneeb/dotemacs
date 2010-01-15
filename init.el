@@ -129,10 +129,10 @@
 (require 'rdebug)
 
 ;; Clojure
-(setq swank-clojure-jar-path "~/.emacs.d/clojure/clojure/clojure.jar"
+(setq swank-clojure-jar-path (concat dotemacs-path "/clojure/clojure/clojure.jar")
       swank-clojure-extra-classpaths (list
-				      "~/.emacs.d/elisp/swank-clojure/src/main/clojure"
-				      "~/.emacs.d/clojure/clojure-contrib/clojure-contrib.jar"))
+				      (concat vendor-path "/swank-clojure/src/main/clojure")
+				      (concat dotemacs-path "/clojure/clojure-contrib/clojure-contrib.jar")))
 (require 'clojure-mode)
 (require 'swank-clojure-autoload)
 (require 'slime)
@@ -175,7 +175,7 @@
 ;; Yasnippet
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/elisp/yasnippet-0.6.1c/snippets")
+(yas/load-directory (concat vendor-path "/yasnippet-0.6.1c/snippets"))
 
 ;; gnus
 ;;(load-file (concat dotemacs-path "/gnus.el"))
