@@ -24,6 +24,7 @@
 (setq make-backup-files nil)
 (prefer-coding-system 'utf-8)
 (server-start)
+(setq-default indent-tabs-mode nil)
 
 ;; paren mode
 (setq show-paren-delay 0)
