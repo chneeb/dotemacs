@@ -25,6 +25,7 @@
 (prefer-coding-system 'utf-8)
 (server-start)
 (setq-default indent-tabs-mode nil)
+(global-set-key "\r" 'newline-and-indent) ; auto indent
 
 ;; paren mode
 (setq show-paren-delay 0)
