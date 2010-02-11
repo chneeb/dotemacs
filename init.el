@@ -33,13 +33,13 @@
 (setq show-paren-style 'parenthesis) ;'expression, 'parenthesis or 'mixed
 
 ;; Color theme stuff
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-arjen)
+;;(require 'color-theme)
+;;(color-theme-initialize)
+;;(color-theme-robin-hood)
 
 ;;(set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
-(set-frame-parameter (selected-frame) 'alpha '(90 90))
-(add-to-list 'default-frame-alist '(alpha 90 90))
+;;(set-frame-parameter (selected-frame) 'alpha '(90 90))
+;;(add-to-list 'default-frame-alist '(alpha 90 90))
 
 ;; Turn off anti-aliasing
 (setq mac-allow-anti-aliasing nil)
@@ -202,6 +202,5 @@
 ;; - http://www.djcbsoftware.nl/dot-emacs.html
 ;; - http://www.emacswiki.org/emacs/hgw-init-wl.el
 ;; - paredit-mode
-;; - Exchange Wanderlust IMAP: Try (setq elmo-imap4-default-authenticate-type 'ntlm).
 ;; - icalendar-import-buffer
 ;; - http://github.com/eschulte/yasnippets-rails
