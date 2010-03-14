@@ -42,7 +42,9 @@
 ;;(add-to-list 'default-frame-alist '(alpha 90 90))
 
 ;; Turn off anti-aliasing
-(setq mac-allow-anti-aliasing nil)
+;;(setq mac-allow-anti-aliasing nil)
+
+(set-face-attribute 'default nil :height 240)
 
 ;; BBDB stuff
 (setq bbdb-file "~/Dropbox/bbdb")
