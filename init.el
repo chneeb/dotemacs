@@ -33,13 +33,13 @@
 (setq show-paren-style 'parenthesis) ;'expression, 'parenthesis or 'mixed
 
 ;; Color theme stuff
-;;(require 'color-theme)
-;;(color-theme-initialize)
-;;(color-theme-robin-hood)
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-arjen)
 
-;;(set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
-;;(set-frame-parameter (selected-frame) 'alpha '(90 90))
-;;(add-to-list 'default-frame-alist '(alpha 90 90))
+;; (set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
+(set-frame-parameter (selected-frame) 'alpha '(90 90))
+(add-to-list 'default-frame-alist '(alpha 90 90))
 
 ;; Turn off anti-aliasing
 ;;(setq mac-allow-anti-aliasing nil)
@@ -89,7 +89,7 @@
 
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(setq org-directory (concat home-path "/Documents/Org"))
+(setq org-directory (concat home-path "/Dropbox/Org"))
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (setq org-todo-keywords '("TODO" "DONE"))
 (setq org-agenda-include-diary t)
@@ -186,7 +186,7 @@
 
 ;; djcb stuff
 ;;(load-file (concat dotemacs-path "/djcb.el"))
-
+                                   
 ;; Own stuff
 (defun gcal ()
   (interactive)
