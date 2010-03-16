@@ -44,7 +44,7 @@
 ;; Turn off anti-aliasing
 ;;(setq mac-allow-anti-aliasing nil)
 
-(set-face-attribute 'default nil :height 240)
+(set-face-attribute 'default nil :height 180)
 
 ;; BBDB stuff
 (setq bbdb-file "~/Dropbox/bbdb")
