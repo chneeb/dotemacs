@@ -33,18 +33,19 @@
 (setq show-paren-style 'parenthesis) ;'expression, 'parenthesis or 'mixed
 
 ;; Color theme stuff
+(load-file (concat dotemacs-path "/zenburn.el"))
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-arjen)
+(color-theme-zenburn)
 
 ;; (set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
-(set-frame-parameter (selected-frame) 'alpha '(90 90))
-(add-to-list 'default-frame-alist '(alpha 90 90))
+;;(set-frame-parameter (selected-frame) 'alpha '(90 90))
+;;(add-to-list 'default-frame-alist '(alpha 90 90))
 
 ;; Turn off anti-aliasing
 ;;(setq mac-allow-anti-aliasing nil)
 
-(set-face-attribute 'default nil :height 180)
+(set-face-attribute 'default nil :height 140)
 
 ;; BBDB stuff
 (setq bbdb-file "~/Dropbox/bbdb")
