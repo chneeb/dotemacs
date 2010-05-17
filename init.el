@@ -171,11 +171,11 @@
        (:connection-type . ssl))))
 
 ;;text-mode
-(add-hook 'text-mode-hook
-  (lambda() 
-    (set-fill-column 78)                    ; lines are 78 chars long ...
-    (auto-fill-mode t)                      ; ... and wrapped around 
-    (set-input-method "latin-1-prefix")))    ; make " + e => ë etc.
+;; (add-hook 'text-mode-hook
+;;   (lambda() 
+;;     (set-fill-column 78)                    ; lines are 78 chars long ...
+;;     (auto-fill-mode t)                      ; ... and wrapped around 
+;;     (set-input-method "latin-1-prefix")))    ; make " + e => ë etc.
 
 ;; Yasnippet
 (require 'yasnippet)

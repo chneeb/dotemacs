@@ -99,4 +99,4 @@
   (setq wl-local-domain "arvatosystems.com")
 )
 
-(wl-account-gmail)
+(wl-account-work)
