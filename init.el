@@ -140,7 +140,7 @@
 				      (concat vendor-path "/swank-clojure/src/main/clojure")
 				      (concat dotemacs-path "/clojure/clojure-contrib/clojure-contrib.jar")))
 (require 'clojure-mode)
-(require 'swank-clojure-autoload)
+(require 'swank-clojure)
 (require 'slime)
 
 (eval-after-load "slime" (slime-setup '(slime-repl)))
