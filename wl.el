@@ -46,6 +46,7 @@
 
 ;; Gmail Account
 (defun wl-account-gmail ()
+  (interactive)
   ;; General
   (setq wl-from "Christian Neeb <chneeb@gmail.com>")
   (setq wl-default-folder "%inbox")
@@ -73,6 +74,7 @@
 
 ;; Work account
 (defun wl-account-work ()
+  (interactive)
   ;; General
   (setq wl-from "Christian Neeb <christian.neeb@arvatosystems.com>")
   (setq wl-default-folder "%inbox")

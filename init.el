@@ -26,6 +26,7 @@
 (server-start)
 (setq-default indent-tabs-mode nil)
 (global-set-key "\r" 'newline-and-indent) ; auto indent
+(setq auto-save-default nil)
 
 ;; paren mode
 (setq show-paren-delay 0)
@@ -33,10 +34,10 @@
 (setq show-paren-style 'parenthesis) ;'expression, 'parenthesis or 'mixed
 
 ;; Color theme stuff
-(load-file (concat dotemacs-path "/zenburn.el"))
+;;(load-file (concat dotemacs-path "/zenburn.el"))
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-zenburn)
+(color-theme-arjen)
 
 ;; (set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
 ;;(set-frame-parameter (selected-frame) 'alpha '(90 90))
