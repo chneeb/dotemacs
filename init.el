@@ -139,7 +139,7 @@
 				      (concat vendor-path "/swank-clojure/src/main/clojure")
 				      (concat dotemacs-path "/clojure/clojure-contrib/clojure-contrib.jar")))
 (require 'clojure-mode)
-(require 'swank-clojure-autoload)
+(require 'swank-clojure)
 (require 'slime)
 
 (eval-after-load "slime" (slime-setup '(slime-repl)))
@@ -151,7 +151,7 @@
 (setq ssl-certificate-verification-policy 0)
 
 ;; Wanderlust
-(load-file (concat dotemacs-path "/wl.el"))
+;;(load-file (concat dotemacs-path "/wl.el"))
 
 ;; Twitter
 (require 'twitter)
@@ -207,3 +207,5 @@
 ;; - paredit-mode
 ;; - icalendar-import-buffer
 ;; - http://github.com/eschulte/yasnippets-rails
+;; - http://julien.danjou.info/google-weather-el.html
+;; - Google Maps
