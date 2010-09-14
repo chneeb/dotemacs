@@ -99,6 +99,7 @@
 (setq org-agenda-include-all-todo t)
 (setq org-hide-leading-stars t)
 (setq org-odd-levels-only t)
+(setq org-blank-before-new-entry nil)
 (setq org-remember-templates
       '(("Todo" ?t "* TODO %? %^g\n %i\n " "todos.org" "Tasks")
 	("Journal" ?j "\n* %^{topic} %T \n%i%?\n" "journal.org" "Journal")
