@@ -140,7 +140,7 @@
 				      (concat vendor-path "/swank-clojure/src/main/clojure")
 				      (concat dotemacs-path "/clojure/clojure-contrib/clojure-contrib.jar")))
 (require 'clojure-mode)
-(require 'swank-clojure-autoload)
+(require 'swank-clojure)
 (require 'slime)
 
 (eval-after-load "slime" (slime-setup '(slime-repl)))
@@ -152,7 +152,7 @@
 (setq ssl-certificate-verification-policy 0)
 
 ;; Wanderlust
-(load-file (concat dotemacs-path "/wl.el"))
+;;(load-file (concat dotemacs-path "/wl.el"))
 
 ;; Twitter
 (require 'twitter)
@@ -208,12 +208,5 @@
 ;; - paredit-mode
 ;; - icalendar-import-buffer
 ;; - http://github.com/eschulte/yasnippets-rails
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
+;; - http://julien.danjou.info/google-weather-el.html
+;; - Google Maps
