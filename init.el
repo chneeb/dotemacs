@@ -90,10 +90,11 @@
 (global-set-key (kbd "C-c r") 'remember)
 
 (require 'org-install)
+(require 'org-mobile)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-directory (concat home-path "/Dropbox/Org"))
 (setq org-default-notes-file (concat org-directory "/notes.org"))
-(setq org-todo-keywords '("TODO" "DONE"))
+(setq org-todo-keywords '((sequence "TODO" "|" "DONE")))
 (setq org-agenda-include-diary t)
 (setq org-agenda-include-all-todo t)
 (setq org-hide-leading-stars t)
@@ -103,6 +104,9 @@
 	("Journal" ?j "\n* %^{topic} %T \n%i%?\n" "journal.org" "Journal")
 	("Private" ?p "\n* %^{topic} %T \n%i%?\n" "private.org" "Diary")
 ))
+(setq org-agenda-files (file-expand-wildcards (concat org-directory "/*.org")))
+(setq org-mobile-directory (concat home-path "/Dropbox/MobileOrg/"))
+(setq org-mobile-inbox-for-pull (concat org-directory "/inbox.org"))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 ;; W3M Stuff

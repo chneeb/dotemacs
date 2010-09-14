@@ -1,6 +1,9 @@
 #!/bin/sh
 mkdir -p elisp
 
+# Org-mode
+curl http://orgmode.org/org-7.01h.tar.gz | tar xzf - -C elisp
+
 # BBDB
 curl http://bbdb.sourceforge.net/bbdb-2.35.tar.gz | tar xzf - -C elisp
 
