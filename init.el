@@ -34,10 +34,10 @@
 (setq show-paren-style 'parenthesis) ;'expression, 'parenthesis or 'mixed
 
 ;; Color theme stuff
-;;(load-file (concat dotemacs-path "/zenburn.el"))
+(load-file (concat dotemacs-path "/zenburn.el"))
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-arjen)
+(color-theme-zenburn)
 
 ;; (set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
 ;;(set-frame-parameter (selected-frame) 'alpha '(90 90))
@@ -160,11 +160,12 @@
 ;;(load-file (concat dotemacs-path "/wl.el"))
 
 ;; Twitter
-(require 'twitter)
-(autoload 'twitter-get-friends-timeline "twitter" nil t)
-(autoload 'twitter-status-edit "twitter" nil t)
-(global-set-key "\C-xt" 'twitter-get-friends-timeline)
-(add-hook 'twitter-status-edit-mode-hook 'longlines-mode)
+;;(require 'twitter)
+;;(autoload 'twitter-get-friends-timeline "twitter" nil t)
+;;(autoload 'twitter-status-edit "twitter" nil t)
+;;(global-set-key "\C-xt" 'twitter-get-friends-timeline)
+;;(add-hook 'twitter-status-edit-mode-hook 'longlines-mode)
+(require 'twittering-mode)
 
 ;; Magit
 (require 'magit)

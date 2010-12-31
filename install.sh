@@ -62,3 +62,5 @@ curl http://yasnippet.googlecode.com/files/yasnippet-0.6.1c.tar.bz2 | tar xjf - 
 # Ruby Debug
 # http://rubyforge.org/frs/download.php/46883/ruby-debug-extra-0.10.3.tar.gz
 
+# Twittering mode
+git clone git://github.com/hayamiz/twittering-mode.git
