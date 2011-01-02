@@ -19,7 +19,6 @@
 (setq frame-title-format "Emacs - %b - %f")
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
-(tabbar-mode 0)
 (transient-mark-mode t)
 (global-hl-line-mode 0)
 (delete-selection-mode t)
@@ -48,7 +47,7 @@
 ;; Turn off anti-aliasing
 ;;(setq mac-allow-anti-aliasing nil)
 
-(set-face-attribute 'default nil :height 140)
+;;(set-face-attribute 'default nil :height 140)
 
 ;; BBDB stuff
 (setq bbdb-file "~/Dropbox/bbdb")
@@ -192,7 +191,7 @@
 (yas/load-directory (concat vendor-path "/yasnippet-0.6.1c/snippets"))
 
 ;; gnus
-;;(load-file (concat dotemacs-path "/gnus.el"))
+(load-file (concat dotemacs-path "/gnus.el"))
 
 ;; djcb stuff
 ;;(load-file (concat dotemacs-path "/djcb.el"))

@@ -1,5 +1,6 @@
 ;; gnus
 (require 'gnus)
+(load-file (concat dotemacs-path "/elisp/gnus/lisp/mailcap.el"))
 
 (setq user-mail-address "chneeb@gmail.com")
 (setq user-full-name "Christian Neeb")
