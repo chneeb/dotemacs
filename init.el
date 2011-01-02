@@ -18,6 +18,8 @@
 (setq inhibit-startup-message t)
 (setq frame-title-format "Emacs - %b - %f")
 (tool-bar-mode 0)
+(scroll-bar-mode 0)
+(tabbar-mode 0)
 (transient-mark-mode t)
 (global-hl-line-mode 0)
 (delete-selection-mode t)
@@ -216,3 +218,4 @@
 ;; - http://github.com/eschulte/yasnippets-rails
 ;; - http://julien.danjou.info/google-weather-el.html
 ;; - Google Maps
+;; - http://learn-elisp-for-emacs.org/
