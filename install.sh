@@ -68,3 +68,6 @@ git clone git://github.com/hayamiz/twittering-mode.git elisp/twittering-mode
 # GNUS
 git clone http://git.gnus.org/gnus.git elisp/gnus
 
+# G-Client
+svn co http://emacspeak.googlecode.com/svn/trunk/lisp/g-client elisp/g-client
+

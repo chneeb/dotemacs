@@ -190,6 +190,24 @@
 (yas/initialize)
 (yas/load-directory (concat vendor-path "/yasnippet-0.6.1c/snippets"))
 
+;; Atom2RSS
+(require 'mm-url)
+
+(defadvice mm-url-insert (after DE-convert-atom-to-rss () )
+  "Converts atom to RSS by calling xsltproc."
+  (when (re-search-forward "xmlns=\"http://www.w3.org/.*/Atom\"" 
+			   nil t)
+    (goto-char (point-min))
+    (message "Converting Atom to RSS... ")
+    (call-process-region (point-min) (point-max) 
+			 "xsltproc" 
+			 t t nil 
+			 (expand-file-name "~/.emacs.d/atom2rss.xsl") "-")
+    (goto-char (point-min))
+    (message "Converting Atom to RSS... done")))
+
+(ad-activate 'mm-url-insert)
+
 ;; gnus
 (load-file (concat dotemacs-path "/gnus.el"))
 
@@ -197,7 +215,7 @@
 ;;(load-file (concat dotemacs-path "/djcb.el"))
                                    
 ;; Own stuff
-(defun gcal ()
+(defun chneeb/gcal ()
   (interactive)
   (let 
       ((quick-add (read-from-minibuffer "Quick Add: "))
