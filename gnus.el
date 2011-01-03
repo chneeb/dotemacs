@@ -39,21 +39,7 @@
 (add-hook 'gnus-topic-mode-hook 'gnus-topic-mode)
 
 ;; Import Google Reader OPML file
-(require 'greader)
 (require 'nnrss)
-
-(defun chneeb/greader-opml-to-string ()
-  "Retrieve OPML representation of our subscription list."
-  (interactive)
-  (declare (special greader-auth-handle greader-subscription-opml-url
-                    g-curl-program g-curl-common-options))
-  (g-auth-ensure-token greader-auth-handle)
-  (shell-command-to-string
-   (format
-    "%s %s %s %s 2>/dev/null"
-    g-curl-program g-curl-common-options
-    (g-authorization greader-auth-handle)
-    greader-subscription-opml-url)))
 
 (defun chneeb/nnrss-greader-opml-import ()
   (interactive)
