@@ -236,7 +236,7 @@
 ;; newsticker-retrieval-interval 0
 ;; newsticker-use-full-width nil
  newsticker-automatically-mark-items-as-old nil
- newsticker-url-list (("Clojure and me" "http://clj-me.blogspot.com/feeds/posts/default" nil nil nil)
+ newsticker-url-list '(("Clojure and me" "http://clj-me.blogspot.com/feeds/posts/default" nil nil nil)
                       ("disclojure" "http://disclojure.org/feed/" nil nil nil)
                       ("emacs-fu" "http://emacs-fu.blogspot.com/feeds/posts/default" nil nil nil)
                       ("Fast Company" "http://www.fastcompany.com/rss.xml" nil nil nil)
