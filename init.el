@@ -34,11 +34,18 @@
 (show-paren-mode t)
 (setq show-paren-style 'parenthesis) ;'expression, 'parenthesis or 'mixed
 
+;; save session state when you quit emacs
+(desktop-save-mode 1)
+
+;; midnight mode purges buffers which haven't been displayed in 3 days
+(require 'midnight)
+(setq midnight-mode 't)
+
 ;; Color theme stuff
-(load-file (concat dotemacs-path "/zenburn.el"))
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-zenburn)
+;; (load-file (concat dotemacs-path "/zenburn.el"))
+;; (require 'color-theme)
+;; (color-theme-initialize)
+;; (color-theme-zenburn)
 
 ;; (set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
 ;;(set-frame-parameter (selected-frame) 'alpha '(90 90))
@@ -314,3 +321,4 @@
 ;; - http://julien.danjou.info/google-weather-el.html
 ;; - Google Maps
 ;; - http://learn-elisp-for-emacs.org/
+;; - https://github.com/espenhw/malabar-mode
