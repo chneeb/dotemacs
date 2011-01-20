@@ -309,6 +309,12 @@
     )
   )
 
+(defun chneeb/setantenv ()
+  (interactive)
+  (let ((ant-home (concat home-path "/Source/adidas/hybris/bin/platform/apache-ant-1.7.1")))
+    (setenv "ANT_HOME" ant-home)
+    (setenv "PATH" (concat ant-home "/bin:" (getenv "PATH")))))
+
 ;; Try the following
 ;; - http://orgmode.org/worg/org-customization-guide.php
 ;; - http://blog.client9.com/2007/09/ruby-mode-for-emacs.html

@@ -71,3 +71,7 @@ git clone http://git.gnus.org/gnus.git elisp/gnus
 # G-Client
 svn co http://emacspeak.googlecode.com/svn/trunk/lisp/g-client elisp/g-client
 
+# ant.el
+git clone https://github.com/apgwoz/ant-el.git elisp/ant-el
+
+
