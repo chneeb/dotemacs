@@ -28,6 +28,7 @@
 (setq-default indent-tabs-mode nil)
 (global-set-key "\r" 'newline-and-indent) ; auto indent
 (setq auto-save-default nil)
+(setq compilation-scroll-output t)
 
 ;; paren mode
 (setq show-paren-delay 0)
@@ -314,6 +315,10 @@
   (let ((ant-home (concat home-path "/Source/adidas/hybris/bin/platform/apache-ant-1.7.1")))
     (setenv "ANT_HOME" ant-home)
     (setenv "PATH" (concat ant-home "/bin:" (getenv "PATH")))))
+
+(defun chneeb/javatags ()
+  (interactive)
+  (shell-command "find . -name *.java | etags --lang=java -o TAGS -"))
 
 ;; Try the following
 ;; - http://orgmode.org/worg/org-customization-guide.php
