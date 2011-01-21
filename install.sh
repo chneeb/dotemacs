@@ -74,4 +74,6 @@ svn co http://emacspeak.googlecode.com/svn/trunk/lisp/g-client elisp/g-client
 # ant.el
 git clone https://github.com/apgwoz/ant-el.git elisp/ant-el
 
-
+# Java complete
+git clone git://github.com/jixiuf/ajc-java-complete.git elisp/ajc-java-complete
+curl -O http://www.emacswiki.org/emacs/download/ajc-java-complete-my-config-example.el
