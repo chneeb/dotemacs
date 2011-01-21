@@ -198,6 +198,9 @@
 (yas/initialize)
 (yas/load-directory (concat vendor-path "/yasnippet-0.6.1c/snippets"))
 
+;; Ant
+(require 'ant)
+
 ;; Atom2RSS
 (require 'mm-url)
 
