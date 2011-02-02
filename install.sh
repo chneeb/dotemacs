@@ -74,6 +74,13 @@ svn co http://emacspeak.googlecode.com/svn/trunk/lisp/g-client elisp/g-client
 # ant.el
 git clone https://github.com/apgwoz/ant-el.git elisp/ant-el
 
+# AutoComplete
+curl http://cx4a.org/pub/auto-complete/auto-complete-1.3.1.tar.bz2 | tar xjf - -C elisp
+
 # Java complete
 git clone git://github.com/jixiuf/ajc-java-complete.git elisp/ajc-java-complete
 curl -O http://www.emacswiki.org/emacs/download/ajc-java-complete-my-config-example.el
+
+# Scala mode
+svn co http://lampsvn.epfl.ch/svn-repos/scala/scala-tool-support/trunk/src/emacs/ elisp/scala-mode
+

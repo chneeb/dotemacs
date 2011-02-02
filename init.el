@@ -193,10 +193,18 @@
 ;;     (auto-fill-mode t)                      ; ... and wrapped around 
 ;;     (set-input-method "latin-1-prefix")))    ; make " + e => ë etc.
 
+;; Scala
+(add-hook 'scala-mode-hook
+          '(lambda ()
+             (yas/minor-mode-on)))
+
 ;; Yasnippet
 (require 'yasnippet)
 (yas/initialize)
 (yas/load-directory (concat vendor-path "/yasnippet-0.6.1c/snippets"))
+
+(setq yas/my-directory (concat vendor-path "/scala-mode/contrib/yasnippet/snippets"))
+(yas/load-directory yas/my-directory)
 
 ;; Ant
 (require 'ant)
