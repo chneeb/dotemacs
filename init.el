@@ -629,3 +629,4 @@
 ;; - https://github.com/espenhw/malabar-mode
 ;; - http://www.emacswiki.org/emacs-en/AutoComplete
 ;; - http://jawher.wordpress.com/2011/01/17/scala-development-environment-emacs-sbt-ensime/
+;; - https://github.com/RayRacine/scallap/blob/master/tools/emacs/sbt.el
