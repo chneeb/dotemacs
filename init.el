@@ -20,7 +20,7 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 (transient-mark-mode t)
-(global-hl-line-mode 0)
+(global-hl-line-mode t)
 (delete-selection-mode t)
 (setq make-backup-files nil)
 (prefer-coding-system 'utf-8)
@@ -43,10 +43,11 @@
 (setq midnight-mode 't)
 
 ;; Color theme stuff
-;; (load-file (concat dotemacs-path "/zenburn.el"))
-;; (require 'color-theme)
-;; (color-theme-initialize)
-;; (color-theme-zenburn)
+(load-file (concat dotemacs-path "/zenburn.el"))
+;; (load-file (concat dotemacs-path "/color-theme-solarized.el"))
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-zenburn)
 
 ;; (set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
 ;;(set-frame-parameter (selected-frame) 'alpha '(90 90))
