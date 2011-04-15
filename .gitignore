@@ -6,3 +6,7 @@ elisp
 tramp
 clojure
 elpa
+.emacs.desktop
+.org-id-locations
+newsticker
+
