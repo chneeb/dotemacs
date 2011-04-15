@@ -156,3 +156,4 @@
 ;; - http://www.emacswiki.org/emacs-en/AutoComplete
 ;; - http://jawher.wordpress.com/2011/01/17/scala-development-environment-emacs-sbt-ensime/
 ;; - https://github.com/RayRacine/scallap/blob/master/tools/emacs/sbt.el
+;; - http://nakkaya.com/2009/12/01/adding-inferior-lisp-support-for-clojure-mode/
