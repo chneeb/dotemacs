@@ -104,6 +104,10 @@
 (yas/initialize)
 (yas/load-directory (concat vendor-path "/yasnippet-0.6.1c/snippets"))
 
+;; Textile
+(require 'textile-mode)
+(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
+
 ;;(load-file (concat dotemacs-path "/scala.el"))
 
 ;; Ant
@@ -157,3 +161,5 @@
 ;; - http://jawher.wordpress.com/2011/01/17/scala-development-environment-emacs-sbt-ensime/
 ;; - https://github.com/RayRacine/scallap/blob/master/tools/emacs/sbt.el
 ;; - http://nakkaya.com/2009/12/01/adding-inferior-lisp-support-for-clojure-mode/
+;; - https://github.com/aemoncannon/ensime
+;; - Mouse for iTerm2 - http://www.iterm2.com/#/section/faq

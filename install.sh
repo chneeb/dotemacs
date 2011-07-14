@@ -84,3 +84,7 @@ curl -O http://www.emacswiki.org/emacs/download/ajc-java-complete-my-config-exam
 # Scala mode
 svn co http://lampsvn.epfl.ch/svn-repos/scala/scala-tool-support/trunk/src/emacs/ elisp/scala-mode
 
+# Textile mode
+mkdir elisp/textile
+curl http://dev.nozav.org/scripts/textile-mode.el > elisp/textile/textile-mode.el
+
