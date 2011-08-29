@@ -163,3 +163,5 @@
 ;; - http://nakkaya.com/2009/12/01/adding-inferior-lisp-support-for-clojure-mode/
 ;; - https://github.com/aemoncannon/ensime
 ;; - Mouse for iTerm2 - http://www.iterm2.com/#/section/faq
+;; - Rainbow cat - http://nyan-mode.buildsomethingamazing.com/
+
