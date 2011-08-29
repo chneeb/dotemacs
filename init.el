@@ -164,4 +164,5 @@
 ;; - https://github.com/aemoncannon/ensime
 ;; - Mouse for iTerm2 - http://www.iterm2.com/#/section/faq
 ;; - Rainbow cat - http://nyan-mode.buildsomethingamazing.com/
+;; - Marmalade - http://marmalade-repo.org/
 
