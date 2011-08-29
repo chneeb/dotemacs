@@ -165,4 +165,5 @@
 ;; - Mouse for iTerm2 - http://www.iterm2.com/#/section/faq
 ;; - Rainbow cat - http://nyan-mode.buildsomethingamazing.com/
 ;; - Marmalade - http://marmalade-repo.org/
+;; - http://emacs-fu.blogspot.com/2011/05/toward-balanced-and-colorful-delimiters.html
 
