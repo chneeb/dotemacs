@@ -27,6 +27,7 @@
 (server-start)
 (setq-default indent-tabs-mode nil)
 (global-set-key "\r" 'newline-and-indent) ; auto indent
+(global-set-key (kbd "<s-return>") 'ns-toggle-fullscreen) ; Mac OS X fullscreen mode
 (setq auto-save-default nil)
 (setq compilation-scroll-output t)
 
