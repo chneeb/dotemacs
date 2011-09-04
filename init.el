@@ -51,10 +51,8 @@
 (package-initialize)
 
 ;; Color theme stuff
-;;(load-file (concat dotemacs-path "/color-theme-solarized.el"))
 (require 'color-theme)
 (color-theme-zenburn)
-;;(color-theme-solarized 'dark)
 
 ;; (set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
 ;;(set-frame-parameter (selected-frame) 'alpha '(90 90))
@@ -168,9 +166,7 @@
 ;; - https://github.com/RayRacine/scallap/blob/master/tools/emacs/sbt.el
 ;; - http://nakkaya.com/2009/12/01/adding-inferior-lisp-support-for-clojure-mode/
 ;; - https://github.com/aemoncannon/ensime
-;; - Mouse for iTerm2 - http://www.iterm2.com/#/section/faq
 ;; - Rainbow cat - http://nyan-mode.buildsomethingamazing.com/
-;; - Marmalade - http://marmalade-repo.org/
 ;; - http://emacs-fu.blogspot.com/2011/05/toward-balanced-and-colorful-delimiters.html
 
 
