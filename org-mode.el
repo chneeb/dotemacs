@@ -1,5 +1,5 @@
 ;; Remember and Org-mode stuff
-(require 'remember-autoloads)
+;;(require 'remember-autoloads)
 (setq remember-annotation-functions '(org-remember-annotation))
 (setq remember-handler-functions '(org-remember-handler))
 (eval-after-load 'remember

@@ -17,4 +17,4 @@
   (ruby-indent-line t) 
   (end-of-line)) 
 (require 'rinari)
-(require 'rdebug)
+;;(require 'rdebug)

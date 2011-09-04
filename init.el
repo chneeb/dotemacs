@@ -42,11 +42,17 @@
 (require 'midnight)
 (setq midnight-mode 't)
 
+;; package.el, ELPA and Marmalade
+(load (expand-file-name (concat dotemacs-path "/elpa/package.el")))
+(mapc '(lambda (item) (add-to-list 'package-archives item))
+            '(("elpa" . "http://tromey.com/elpa/")
+              ("technomancy" . "http://repo.technomancy.us/emacs/")
+              ("marmalade" . "http://marmalade-repo.org/packages/")))
+(package-initialize)
+
 ;; Color theme stuff
-(load-file (concat dotemacs-path "/zenburn.el"))
 ;;(load-file (concat dotemacs-path "/color-theme-solarized.el"))
 (require 'color-theme)
-(color-theme-initialize)
 (color-theme-zenburn)
 ;;(color-theme-solarized 'dark)
 
@@ -69,7 +75,7 @@
 
 (load-file (concat dotemacs-path "/org-mode.el"))
 
-(load-file (concat dotemacs-path "/w3m.el"))
+;;(load-file (concat dotemacs-path "/w3m.el"))
 
 (load-file (concat dotemacs-path "/ruby.el"))
 
@@ -102,11 +108,11 @@
 ;; Yasnippet
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory (concat vendor-path "/yasnippet-0.6.1c/snippets"))
+;;(yas/load-directory (concat vendor-path "/yasnippet-0.6.1c/snippets"))
 
 ;; Textile
-(require 'textile-mode)
-(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
+;;(require 'textile-mode)
+;;(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
 
 ;;(load-file (concat dotemacs-path "/scala.el"))
 
@@ -166,4 +172,6 @@
 ;; - Rainbow cat - http://nyan-mode.buildsomethingamazing.com/
 ;; - Marmalade - http://marmalade-repo.org/
 ;; - http://emacs-fu.blogspot.com/2011/05/toward-balanced-and-colorful-delimiters.html
+
+
 
