@@ -169,6 +169,6 @@
 ;; - https://github.com/aemoncannon/ensime
 ;; - Rainbow cat - http://nyan-mode.buildsomethingamazing.com/
 ;; - http://emacs-fu.blogspot.com/2011/05/toward-balanced-and-colorful-delimiters.html
-
-
-
+;; - R and Emacs  - http://languageagnostic.blogspot.com/2011/09/r-and-emacs.html
+;; - Scheme in Emacs - http://languageagnostic.blogspot.com/2011/05/mit-scheme-in-emacs.html
+;; - Deft Note Taking - http://jblevins.org/projects/deft/
