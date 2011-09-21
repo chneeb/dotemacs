@@ -109,6 +109,12 @@
 (yas/initialize)
 ;;(yas/load-directory (concat vendor-path "/yasnippet-0.6.1c/snippets"))
 
+;; Deft - http://jblevins.org/projects/deft/
+(require 'deft)
+(setq deft-extension "org")
+(setq deft-directory "~/Dropbox/Deft")
+(setq deft-text-mode 'org-mode)
+
 ;; Textile
 ;;(require 'textile-mode)
 ;;(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
