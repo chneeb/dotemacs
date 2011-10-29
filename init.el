@@ -178,3 +178,4 @@
 ;; - R and Emacs  - http://languageagnostic.blogspot.com/2011/09/r-and-emacs.html
 ;; - Scheme in Emacs - http://languageagnostic.blogspot.com/2011/05/mit-scheme-in-emacs.html
 ;; - Deft Note Taking - http://jblevins.org/projects/deft/
+;; - Collab Editor - http://www.emacswiki.org/emacs/Rudel
