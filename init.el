@@ -180,3 +180,5 @@
 ;; - Deft Note Taking - http://jblevins.org/projects/deft/
 ;; - Collab Editor - http://www.emacswiki.org/emacs/Rudel
 ;; - MiniMap - http://www.emacswiki.org/emacs/MiniMap
+;; - AceJump
+;; - EmacsRocks Screencasts - http://emacsrocks.com
