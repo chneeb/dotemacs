@@ -193,3 +193,4 @@
 ;; - MiniMap - http://www.emacswiki.org/emacs/MiniMap
 ;; - AceJump
 ;; - EmacsRocks Screencasts - http://emacsrocks.com
+;; - Sauron - http://emacs-fu.blogspot.com/2011/12/sauron-keeping-eye-on-whats-going-on.html
