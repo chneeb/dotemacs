@@ -115,6 +115,9 @@
 (setq deft-directory "~/Dropbox/Deft")
 (setq deft-text-mode 'org-mode)
 
+;; Simple RTM (Remember the Milk)
+(autoload 'simple-rtm-mode "simple-rtm" "Interactive mode for Remember The Milk" t)
+
 ;; Textile
 ;;(require 'textile-mode)
 ;;(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
@@ -182,3 +185,4 @@
 ;; - MiniMap - http://www.emacswiki.org/emacs/MiniMap
 ;; - AceJump
 ;; - EmacsRocks Screencasts - http://emacsrocks.com
+;; - Variable Width Fonts - http://xahlee.blogspot.com/2010/07/how-to-quickly-switch-fonts-in-emacs.html
