@@ -9,4 +9,4 @@ elpa
 .emacs.desktop
 .org-id-locations
 newsticker
-
+.rtm-auth-token
