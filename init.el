@@ -158,6 +158,17 @@
   (interactive)
   (shell-command "find . -name *.java | etags --lang=java -o TAGS -"))
 
+;; Some keyboard shortcuts
+(global-set-key (kbd "<f1>") '(lambda ()
+                                (interactive)
+                                (switch-to-buffer "*scratch*")))
+(global-set-key (kbd "<f3>") '(lambda ()
+                                (interactive)
+                                (find-file (concat dotemacs-path "/init.el"))))
+(global-set-key (kbd "<f4>") 'deft)
+(global-set-key (kbd "<f5>") 'compile)
+(global-set-key (kbd "<f6>") 'magit-status)
+
 ;; Try the following
 ;; - http://orgmode.org/worg/org-customization-guide.php
 ;; - http://blog.client9.com/2007/09/ruby-mode-for-emacs.html
@@ -186,3 +197,5 @@
 ;; - AceJump
 ;; - EmacsRocks Screencasts - http://emacsrocks.com
 ;; - Variable Width Fonts - http://xahlee.blogspot.com/2010/07/how-to-quickly-switch-fonts-in-emacs.html
+;; - Sauron - http://emacs-fu.blogspot.com/2011/12/sauron-keeping-eye-on-whats-going-on.html
+;; - Quack for Scheme - http://www.neilvandyke.org/quack/
